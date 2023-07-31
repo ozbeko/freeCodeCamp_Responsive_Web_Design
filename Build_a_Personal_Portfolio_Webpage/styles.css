@@ -1,0 +1,309 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+#navbar {
+  background-color: rgb(124, 38, 38);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+#nav-list {
+  display: flex;
+}
+
+.nav-list-item {
+  list-style-type: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  margin: auto 3rem;
+  font-size: x-large;
+}
+
+#welcome-section {
+  background-color: rgb(75, 74, 74);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome-section > h1 {
+  color: white;
+  line-height: 0;
+  font-size: 4rem;
+}
+
+#welcome-section > p {
+  color: rgb(124, 38, 38);
+  font-size: 3rem;
+  font-style: italic;
+  margin: 0.6rem auto;
+}
+
+#projects {
+  background-color: rgb(82, 85, 133);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+#projects > h2 {
+  color: white;
+  font-size: 3rem;
+  line-height: 0.1rem;
+}
+#projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.project-img {
+  width: 25rem;
+  height: 25rem;
+  margin-bottom: 0rem;
+  margin-top: 3rem;
+}
+
+.project-tile {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#show-all-button {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  height: 3rem;
+  font-size: 1.1rem;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(75, 74, 74);
+  color: white;
+  cursor: pointer;
+}
+
+#show-all-button:hover {
+  background-color: rgb(124, 38, 38);
+  animation-name: show-all-button-hover;
+  animation-duration: 0.6s;
+}
+
+@keyframes show-all-button-hover {
+  from {
+    background-color: rgb(75, 74, 74);
+  }
+  to {
+    background-color: rgb(124, 38, 38);
+  }
+}
+.project-img-caption {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(75, 74, 74);
+  width: 25rem;
+  height: 3rem;
+  margin-top: -0.2rem;
+}
+
+#contact {
+  background-color: rgb(75, 74, 74);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+#contact > h1 {
+  color: white;
+  line-height: 0;
+  font-size: 4rem;
+}
+
+#contact > p {
+  color: white;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: lighter;
+  margin: 0.6rem auto;
+}
+
+#contact-links {
+  display: inline-flex;
+  justify-content: center;
+}
+
+#profile-link {
+  color: white;
+  font-size: 1.5rem;
+  margin: 5rem 3.4rem;
+  text-decoration: none;
+}
+
+#profile-link:hover {
+  animation-name: profile-link-hover;
+  animation-duration: 1s;
+  margin-top: 5.6rem;
+}
+
+#footer-line {
+  background-color: rgb(124, 38, 38);
+  width: 100%;
+  margin-top: 10rem;
+  height: 0.5rem;
+}
+
+footer {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  font-size: 1.2rem;
+}
+
+footer > p > a {
+  text-decoration: none;
+  color: white;
+}
+
+@keyframes contact-item-hover {
+  from {
+    margin-top: 5rem;
+  }
+  to {
+    margin-top: 5.6rem;
+  }
+}
+
+@media only screen and (max-width: 875px) {
+  .nav-link {
+    font-size: medium;
+  }
+
+  .project-img {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .project-tile {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .project-img-caption {
+    width: 18rem;
+    height: 2rem;
+    font-size: smaller;
+  }
+
+  #projects > h2 {
+    font-size: x-large;
+  }
+
+  #show-all-button {
+    margin-top: 3.5rem;
+  }
+
+  #contact > h1 {
+    font-size: xx-large;
+  }
+
+  #contact > p {
+    font-size: medium;
+  }
+
+  #profile-link {
+    font-size: large;
+    margin: 3rem 1rem;
+  }
+
+  #profile-link:hover {
+    animation-name: profile-link-hover-small;
+    animation-duration: 1s;
+    margin-top: 3.6rem;
+  }
+
+  @keyframes profile-link-hover-small {
+    from {
+      margin-top: 3rem;
+    }
+    to {
+      margin-top: 3.6rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 705px) {
+  #projects-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #show-all-button {
+    margin-top: 3.5rem;
+  }
+
+  #contact > h1 {
+    font-size: x-large;
+  }
+
+  #contact > p {
+    font-size: smaller;
+  }
+
+  #profile-link {
+    font-size: medium;
+    margin: 3rem 1rem;
+  }
+
+  #profile-link:hover {
+    animation-name: profile-link-hover-small;
+    animation-duration: 1s;
+    margin-top: 3.6rem;
+  }
+
+  @keyframes profile-link-hover-small {
+    from {
+      margin-top: 3rem;
+    }
+    to {
+      margin-top: 3.6rem;
+    }
+  }
+
+  footer > p{
+    font-size: smaller;
+  }
+
+  #welcome-section > h1{
+    font-size: xx-large;
+  }
+
+  #welcome-section > p {
+    font-size: x-large;
+  }
+}
